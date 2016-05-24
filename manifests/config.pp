@@ -75,6 +75,7 @@ class postfix::config (
   $maildrop_destination_recipient_limit = undef,
   $dovecot_destination_recipient_limit  = undef,
   $luser_relay                          = undef,
+  $relayhost                            = undef,
   $mastercfs                            = {},
 ) {
   include postfix
@@ -86,6 +87,8 @@ class postfix::config (
   postfix::config::maincfhelper { 'mailbox_command': value => $mailbox_command, }
 
   postfix::config::maincfhelper { 'luser_relay': value => $luser_relay, }
+
+  postfix::config::maincfhelper { 'relayhost': value => $relayhost, }
 
   postfix::config::maincfhelper { 'smtpd_sasl_type': value => $smtpd_sasl_type, }
 

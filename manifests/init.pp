@@ -15,11 +15,9 @@ class postfix(
   ){
   package { 'postfix':
     ensure  => installed,
-    before  => Exec['postfix'],
   }
 
   service { 'postfix':
     ensure  => $service_ensure,
-    require => Exec['postfix']
   }
 }

@@ -16,7 +16,6 @@ define postfix::config::maincf(
   Augeas {
     context => '/files/etc/postfix/main.cf',
     notify  => Service['postfix'],
-    require => Exec['postfix']
   }
 
   case $ensure {
@@ -39,4 +38,3 @@ define postfix::config::maincf(
     }
   }
 }
-

@@ -35,7 +35,6 @@ define postfix::config::mastercf (
   Augeas {
     context => '/files/etc/postfix/master.cf',
     notify  => Service['postfix'],
-    require => Exec['postfix'],
   }
 
   if is_hash($options) {
@@ -71,4 +70,3 @@ define postfix::config::mastercf (
     }
   }
 }
-
