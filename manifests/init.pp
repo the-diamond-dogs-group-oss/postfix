@@ -10,20 +10,16 @@
 # === Authors
 #
 # mjhas@github
-class postfix {
+class postfix(
+    $service_ensure = 'running'
+  ){
   package { 'postfix':
     ensure  => installed,
     before  => Exec['postfix'],
   }
 
-  exec { 'postfix':
-    command     => 'echo "postfix packages are installed"',
-    path        => '/usr/sbin:/bin:/usr/bin:/sbin',
-    logoutput   => true,
-    refreshonly => true,
-  }
   service { 'postfix':
-    ensure  => 'running',
+    ensure  => $service_ensure,
     require => Exec['postfix']
   }
 }
