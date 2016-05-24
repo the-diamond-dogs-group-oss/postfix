@@ -10,28 +10,17 @@
       "operatingsystem": "Redhat",
       "operatingsystemrelease": [
       ]
-    },
-    {
-      "operatingsystem": "Ubuntu",
-      "operatingsystemrelease": [
-      ]
     }
   ],
-  "requirements": [
-    {
-      "name": "puppet",
-      "version_requirement": ">=2.7.20 <4.0.0"
-    }
-  ],
-  "name": "mjhas-postfix",
-  "version": "1.0.0",
+  "name": "dd-postfix",
+  "version": "1.0.1",
   "summary": "",
-  "author": "mjhas",
+  "author": "DD",
   "summary": "This Postfix Module installs postfix and configures it using Augeas",
   "dependencies": [
-    {"name":"puppetlabs/stdlib","version_requirement":"4.3.2"}
+    {"name":"puppetlabs/stdlib","version_requirement":">=1.0.0"}
   ],
-  "source": "https://github.com/mjhas/postfix.git",
-  "project_page": "https://github.com/mjhas/postfix",
+  "source": "git@github.com:the-diamond-dogs-group-oss/postfix.git",
+  "project_page": "https://github.com/the-diamond-dogs-group-oss/postfix",
   "license": "Apache License 2.0"
 }
